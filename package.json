@@ -1,0 +1,23 @@
+{
+  "name": "bingpaper",
+  "version": "1.0.0",
+  "description": "tool for dowmload bing wallpaper",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/newwangzhicheng/bingpaper.git"
+  },
+  "author": "wzc",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/newwangzhicheng/bingpaper/issues"
+  },
+  "homepage": "https://github.com/newwangzhicheng/bingpaper#readme",
+  "dependencies": {
+    "superagent": "^5.2.2",
+    "wallpaper": "^4.4.1"
+  }
+}
