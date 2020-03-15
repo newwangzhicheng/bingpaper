@@ -1,8 +1,8 @@
 {
   "name": "bingpaper",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "tool for dowmload bing wallpaper",
-  "main": "build/bingUtils.js",
+  "main": "src/bingUtils.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "webpack": "webpack"
