@@ -1,6 +1,7 @@
 const superAgent = require('superagent');
 const fs = require('fs');
 const path = require('path');
+const wallpaper = require('wallpaper');
 
 const bing = 'https://cn.bing.com';
 const bingURL = 'http://www.bing.com/HPImageArchive.aspx';
@@ -86,6 +87,29 @@ module.exports = {
       });
   },
 
+  /**
+   * 设置今日的壁纸
+   * 
+   */
+  setWallpaper: function () {  
+    const options = {
+      n: 1,
+    };
+    this.featchPicURLs(options, (urls) => {
+      Object.keys(urls).forEach((name) => {
+        const imagePath = path.normalize('C:/Users/Administrator/Pictures');
+        const options = {
+          name,
+          path: imagePath,
+        }
+        this.downloadPic(urls[name], options, () => {
+          //设置今日最新的为壁纸
+          const imageURL = path.resolve(imagePath, `./${name}.jpg`);
+          wallpaper.set(imageURL);
+        })
+      })
+    });
+  },
   /**
   * 返回年月日
   */

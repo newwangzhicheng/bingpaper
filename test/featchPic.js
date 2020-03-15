@@ -8,7 +8,7 @@ bingUtils.featchPicURLs(options, (urls) => {
   Object.keys(urls).forEach((name) => {
     const options = {
       name,
-      path: path.resolve(process.cwd(), './image'),
+      path: path.resolve(process.cwd(), './images'),
     }
     bingUtils.downloadPic(urls[name], options, () => {
       console.log('保存成功');

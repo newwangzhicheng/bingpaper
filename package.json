@@ -2,9 +2,10 @@
   "name": "bingpaper",
   "version": "1.0.0",
   "description": "tool for dowmload bing wallpaper",
-  "main": "index.js",
+  "main": "build/bingUtils.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webpack": "webpack"
   },
   "repository": {
     "type": "git",
@@ -17,7 +18,13 @@
   },
   "homepage": "https://github.com/newwangzhicheng/bingpaper#readme",
   "dependencies": {
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7",
     "superagent": "^5.2.2",
     "wallpaper": "^4.4.1"
+  },
+  "devDependencies": {
+    "webpack": "^4.42.0",
+    "webpack-cli": "^3.3.11"
   }
 }
